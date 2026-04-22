@@ -15,5 +15,11 @@ public class Suma {
         System.out.println("La suma es: " + resultado);
 
         scanner.close();
+
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.println("Introduce el tercer número: ");
+        double num3 = scanner2.nextDouble();
+        System.out.println("El resultado es: " + (resultado + num3));
+        scanner2.close();
     }
 }
