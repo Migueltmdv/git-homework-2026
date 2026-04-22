@@ -3,23 +3,44 @@ import java.util.Scanner;
 public class Suma {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
 
-        System.out.print("Introduce el primer número: ");
-        double num1 = scanner.nextDouble();
+        while (continuar) {
+            System.out.println("Elige una operación: suma, resta, multiplicación o salir");
+            String operacion = scanner.next();
 
-        System.out.print("Introduce el segundo número: ");
-        double num2 = scanner.nextDouble();
+            if (operacion.equalsIgnoreCase("salir")) {
+                continuar = false;
+                break;
+            }
 
-        double resultado = num1 + num2;
+            System.out.print("Introduce el primer número: ");
+            double num1 = scanner.nextDouble();
 
-        System.out.println("La suma es: " + resultado);
+            System.out.print("Introduce el segundo número: ");
+            double num2 = scanner.nextDouble();
+
+            double resultado = 0;
+
+            switch (operacion.toLowerCase()) {
+                case "suma":
+                    resultado = num1 + num2;
+                    break;
+                case "resta":
+                    resultado = num1 - num2;
+                    break;
+                case "multiplicación":
+                case "multiplicacion":
+                    resultado = num1 * num2;
+                    break;
+                default:
+                    System.out.println("Operación no válida. Intenta de nuevo.");
+                    continue;
+            }
+
+            System.out.println("El resultado es: " + resultado);
+        }
 
         scanner.close();
-
-        Scanner scanner2 = new Scanner(System.in);
-        System.out.println("Introduce el tercer número: ");
-        double num3 = scanner2.nextDouble();
-        System.out.println("El resultado es: " + (resultado + num3));
-        scanner2.close();
     }
 }
