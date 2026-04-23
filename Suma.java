@@ -38,7 +38,7 @@ public class Suma {
                     continue;
             }
 
-            System.out.println("El resultado es: " + resultado);
+            System.out.println("El resultado es: " + num2);
         }
 
         scanner.close();
