@@ -39,6 +39,16 @@ public class Suma {
             }
 
             System.out.println("El resultado es: " + resultado);
+
+            System.out.println("¿Quieres realizar otra operación? (sí/no)");
+            String respuesta = scanner.next();
+            if (!respuesta.equalsIgnoreCase("sí")) {    
+                continuar = false;
+            }
+
+            System.out.println(); 
+
+            
         }
 
         scanner.close();
